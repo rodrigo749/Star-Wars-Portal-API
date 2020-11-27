@@ -8,6 +8,10 @@ module.exports = app => {
     .post(characterController.create);
 
     app.route('/api/character/:id')
+    .put(characterController.update)
     .delete(characterController.delete)
+
+   app.route('/api/character/find/:id')
+   .get(characterController.find) 
 
 }

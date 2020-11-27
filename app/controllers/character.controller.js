@@ -28,3 +28,21 @@ exports.delete = async (req, res) => {
         res.status(500).send({ message: 'Error deleting character' });
     }
 }
+
+exports.update = async(req, res) => {
+    const chars = await Chars.update(req.params.id, req.body);
+
+    if(chars){
+        res.status(200).send({ message: 'Charactter updated sucessfully!'})
+    }else{
+        res.status(500).send({ message: 'Error updating character'});
+    }
+}
+
+exports.find = async (req, res) =>{
+                   
+    const chars = await Chars.find(req.params.id);
+    
+
+    res.status(200).send(chars);
+}

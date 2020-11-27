@@ -30,3 +30,25 @@ exports.delete = async(id) => {
                          WHERE id = ${id} `);
     return rs.rowsAffected;                                
 }
+
+exports.update = async(id, dados) => {
+    const pool = await poolPromise;
+    const rs = await pool 
+                .request()
+                .query(`UPDATE characters  SET 
+                        name_char = '${dados.name_char}',
+                        age = '${dados.age}'
+                        WHERE id = ${id} `);
+    return rs.rowsAffected;                                
+}
+
+exports.find = async(id) =>{
+    const pool = await poolPromise;
+    const rs = await pool
+            .request()
+            .query(`SELECT *
+                    FROM characters 
+                    WHERE id = ${id} `);
+    
+            return rs.recordset;
+}
