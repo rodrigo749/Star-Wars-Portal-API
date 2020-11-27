@@ -11,7 +11,5 @@
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
+4. Run the script on Database
    ```
