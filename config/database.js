@@ -16,17 +16,32 @@ module.exports = {
   sql, poolPromise
 };
 
-// var mysql = require('mysql');
 
-// var con = mysql.createConnection({
-//   host: "127.0.0.1",
-//   user: "root",
-//   password: ""
+//utilizando MYSQL
+// const mysql = require('mysql');
+
+// var config =
+// {
+//     host: 'mydemoserver.mysql.database.azure.com',
+//     user: 'myadmin@mydemoserver',
+//     password: 'your_password',
+//     database: 'star-wars',
+//     port: 3306,
+//     ssl: true
+// };
+
+// const conn = new mysql.createConnection(config);
+
+// conn.connect(
+//     function (err) { 
+//     if (err) { 
+//         console.log("!!! Cannot connect !!! Error:");
+//         throw err;
+//     }
+//     else
+//     {
+//        console.log("Connection established.");
+//            queryDatabase();
+//     }   
 // });
-
-// con.connect(function(err) {
-//   if (err) throw err;
-//   console.log("Connected!");
-// });
-
 
