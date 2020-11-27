@@ -1,3 +1,5 @@
+
+//Utilizar esse trecho se for utulizar mssql 
 const sql = require('mssql')
 
 const config = 'mssql://sa:123456@NTHCSL29740/\SA/star-wars';
@@ -13,3 +15,18 @@ const poolPromise = new sql.ConnectionPool(config)
 module.exports = {
   sql, poolPromise
 };
+
+// var mysql = require('mysql');
+
+// var con = mysql.createConnection({
+//   host: "127.0.0.1",
+//   user: "root",
+//   password: ""
+// });
+
+// con.connect(function(err) {
+//   if (err) throw err;
+//   console.log("Connected!");
+// });
+
+
