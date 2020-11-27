@@ -15,7 +15,7 @@ exports.create = async(dados) => {
     const rs = await pool 
                 .request()
                 .query(`INSERT INTO characters (name_char, age)
-                        VALUES (UPPER('${dados.name_char}', '${dados.age}'))`);
+                        VALUES ('${dados.name_char}', '${dados.age}')`);
                         
     return rs.rowsAffected;                                
 }

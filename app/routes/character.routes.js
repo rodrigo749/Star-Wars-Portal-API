@@ -1,19 +1,10 @@
-const Char= require ('../models/character.model');
+module.exports = app => {
+    const characterController = require('../controllers/character.controller');
 
-exports.create = async(req, res) =>{
-    const char = await Char.create(req.body);
+    app.route('/api/character')
+    .get(characterController.getAll) 
 
-    if(char){
-        res.status(200).send({message:'Character sucessfully regitered'})
-    }else{
-        res.status(500).send({message:'Error when registering the character'});
-    }
-}
-
-
-exports.getAll = async(req, res) =>{
-   
-    const char = await Char.getAll();
-    res.status(200).send(char)
+    app.route('/api/character')
+    .post(characterController.create);
 
 }
