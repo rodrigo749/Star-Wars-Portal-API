@@ -17,3 +17,14 @@ exports.getAll = async(req, res) =>{
     res.status(200).send(chars)
 
 }
+
+
+exports.delete = async (req, res) => {
+    const chars = await Chars.delete(req.params.id, req.body);
+
+    if (chars) {
+        res.status(200).send({ message: 'Character successfully created' })
+    } else {
+        res.status(500).send({ message: 'Error deleting character' });
+    }
+}

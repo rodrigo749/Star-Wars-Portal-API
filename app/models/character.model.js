@@ -19,3 +19,14 @@ exports.create = async(dados) => {
                         
     return rs.rowsAffected;                                
 }
+
+
+exports.delete = async(id) => {
+    const pool = await poolPromise;
+    const rs = await pool 
+                .request()
+                .query(`DELETE FROM characters
+                         
+                         WHERE id = ${id} `);
+    return rs.rowsAffected;                                
+}

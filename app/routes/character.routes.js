@@ -7,4 +7,7 @@ module.exports = app => {
     app.route('/api/character')
     .post(characterController.create);
 
+    app.route('/api/character/:id')
+    .delete(characterController.delete)
+
 }
