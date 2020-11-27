@@ -13,4 +13,6 @@
 
 
 4. Run API
- node server.js
+```sh
+   node server.js
+   ```
