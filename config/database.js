@@ -2,7 +2,7 @@
 //Utilizar esse trecho se for utulizar mssql 
 const sql = require('mssql')
 
-const config = 'mssql://sa:123456@NTHCSL29740/\SA/star-wars';
+const config = 'mssql://sa:123456@DESKTOP-CCK7J2F/\SQLEXPRESS/star-wars';
 
 const poolPromise = new sql.ConnectionPool(config)
   .connect()
